@@ -13,6 +13,7 @@ const void *file_handler(const char *filename, int *length) {
 int main() {
 	size_t my_window = webui_new_window();
 	webui_set_file_handler(my_window, file_handler);
+	webui_set_size(my_window, 640, 480);
 	webui_show(my_window, "www/index.html");
 	webui_wait();
 	return 0;

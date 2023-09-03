@@ -3,7 +3,7 @@ WEBUI?=$(shell echo ~/Pulled/webui)
 
 CFLAGS=-Wall -I$(WEBUI)/include
 
-OBJ=main.o $(WEBUI)/build/Linux/GCC/libwebui-2-static-x64.a
+OBJ=main.o $(WEBUI)/dist/libwebui-2-static.a
 
 app: dump $(OBJ)
 	$(CC) $(OBJ) dump.o -o app
